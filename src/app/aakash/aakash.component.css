@@ -32,3 +32,6 @@ textarea.ng-invalid.ng-touched{
 input.ng-valid.ng-touched{
     border-color: #f7b731;
 }
+textarea.ng-valid.ng-touched{
+    border-color: #f7b731;
+}

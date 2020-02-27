@@ -4,7 +4,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 //
 //
 
-import { AppRoutingModule } from './app-routing.module';
+import { AppRoutingModule,routingComponent} from './app-routing.module';
 import { AppComponent } from './app.component';
 import { TestComponent } from './test/test.component';
 import { AakashComponent } from './aakash/aakash.component';
@@ -12,9 +12,10 @@ import { AakashComponent } from './aakash/aakash.component';
 @NgModule({
   declarations: [
     AppComponent,
+    routingComponent,
     TestComponent,
     AakashComponent
-  ],
+    ],
   imports: [
     BrowserModule,
     ReactiveFormsModule,
@@ -24,3 +25,8 @@ import { AakashComponent } from './aakash/aakash.component';
   bootstrap: [AppComponent]
 })
 export class AppModule { }
+
+
+
+
+

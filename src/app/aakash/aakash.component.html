@@ -1,7 +1,11 @@
 <div class="container">
+    <div>
+        <button type="button" (click)="Details()">Details</button>
+    </div>
     <h3> <strong><i>Registration Form</i></strong></h3> <br>
     <div id="form">
-        <form [formGroup]='signupForm' (ngSubmit)="Submit(signupForm)">
+        <form [formGroup]='signupForm'>
+            <!-- (ngSubmit)="Submit(signupForm)" -->
             <div class="form-group">
                 <label for="FullName">Full Name:</label>
                 <input id="Full Name" formControlName='fname' type="text" class="form-control" placeholder="Enter Name"
@@ -33,8 +37,9 @@
                     class="form-control"></textarea>
             </div>
             <div class="text-center">
-                <!-- <button id='bt' class="btn">Submit</button>  -->
-                <input type="Submit" value="Submit" [disabled]='!signupForm.valid'>
+                <button id='bt' (click)="Submit()" [disabled]='!signupForm.valid' class="btn">Submit</button>
+                <button id='bt' (click)="resetForm()" class="btn">Reset</button>
+                <!-- <input type="Submit" value="Submit" >  -->
             </div>
 
         </form>
