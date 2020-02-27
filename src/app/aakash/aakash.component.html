@@ -1,0 +1,42 @@
+<div class="container">
+    <h3> <strong><i>Registration Form</i></strong></h3> <br>
+    <div id="form">
+        <form [formGroup]='signupForm' (ngSubmit)="Submit(signupForm)">
+            <div class="form-group">
+                <label for="FullName">Full Name:</label>
+                <input id="Full Name" formControlName='fname' type="text" class="form-control" placeholder="Enter Name"
+                    style="widows: 100%;">
+            </div>
+            <div class="form-group">
+                <label for="Age">Age:</label>
+                <input id="Age" type="number" formControlName="fage" class="form-control" placeholder="Enter Age"
+                    style="widows: 100%;">
+            </div>
+            <div class="form-group">
+                <label for="Contact">Contact:</label>
+                <input id="Contact" type="text" formControlName="fcontact" class="form-control"
+                    placeholder="Enter Contact No" style="widows: 100%;">
+            </div>
+            <div class="form-group">
+                <label for="Address">Address:</label>
+                <input id="Address" type="text" formControlName="faddress" class="form-control"
+                    placeholder="Enter Address" style="widows: 100%;">
+            </div>
+            <div class="form-group">
+                <label for="Email">E-Mail:</label>
+                <input id="Email" type="email" formControlName="femail" class="form-control"
+                    placeholder="Enter Email Address" style="widows: 100%;">
+            </div>
+            <div class="form-group">
+                <label for="Bio">Bio:</label>
+                <textarea id="Bio" formControlName="fbio" placeholder="Enter Details" cols='30' rows='10'
+                    class="form-control"></textarea>
+            </div>
+            <div class="text-center">
+                <!-- <button id='bt' class="btn">Submit</button>  -->
+                <input type="Submit" value="Submit" [disabled]='!signupForm.valid'>
+            </div>
+
+        </form>
+    </div>
+</div>
