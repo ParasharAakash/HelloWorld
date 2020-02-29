@@ -4,7 +4,7 @@ import { AakashComponent } from "./aakash/aakash.component";
 import { TestComponent } from "./test/test.component";
 const routes: Routes = [
   {path : 'test', component:TestComponent},
-  {path : 'aakash', component:AakashComponent}
+  {path : 'edit/:id', component:AakashComponent}
 ];
 @NgModule({
   imports: [RouterModule.forRoot(routes)],

@@ -1,7 +1,7 @@
 <div class="container">
-    <div>
+    <!-- <div>
         <button type="button" (click)="Details()">Details</button>
-    </div>
+    </div> -->
     <h3> <strong><i>Registration Form</i></strong></h3> <br>
     <div id="form">
         <form [formGroup]='signupForm'>
@@ -37,11 +37,12 @@
                     class="form-control"></textarea>
             </div>
             <div class="text-center">
-                <button id='bt' (click)="Submit()" [disabled]='!signupForm.valid' class="btn">Submit</button>
-                <button id='bt' (click)="resetForm()" class="btn">Reset</button>
+                <button id='bt' (click)="Submit()"  [disabled]='!signupForm.valid' class="btn">Submit</button>
+                <button id='bt' type="reset" class="btn">Reset</button>
+                <button id='bt' class="btn" routerLink="/test"  routerLinkActive="active"> List</button>
                 <!-- <input type="Submit" value="Submit" >  -->
             </div>
-
         </form>
     </div>
 </div>
+

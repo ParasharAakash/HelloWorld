@@ -1,0 +1,33 @@
+h1{
+    color: #c7da1d;
+}
+#bt1{
+    border: 2px slategrey solid;
+    background-color: #c7da1d;
+}
+td{
+    background-color: #c7da1d;
+}
+#edit{
+    width: auto;
+    border: 2px slategrey solid;
+    background-color: #2f3640;
+    color: blanchedalmond;
+    padding: 5px;
+}
+#del{
+    border: 2px slategrey solid;
+    background-color: #2f3640;
+    color: blanchedalmond;
+    padding: 5px;
+}
+table{
+    color: blanchedalmond;
+}
+td{
+    font-size: large;
+    color: black;
+}
+th{
+    color: blanchedalmond;
+}

@@ -1,4 +1,51 @@
+<br>
 <div class="container colr">
-    <button (click)="onClickMe()"></button>
+    <h1><i><strong> Details </strong></i></h1><br><br>
+    <!-- {{ onClickMe() }}
    <div id="ab"></div>
 </div>
+<br><br> -->
+
+    <div class="container">
+        <table class="table table-striped">
+            <thead>
+                <tr>
+
+                    <th scope='col'>S.no</th>
+                    <th scope='col'>Full Name</th>
+                    <th scope='col'>Age</th>
+                    <th scope='col'>Contact</th>
+                    <th scope='col'>Address</th>
+                    <th scope='col'>Email</th>
+                    <th scope='col'>Bio</th>
+                    <th scope='col'></th>
+                    <th scope='col'></th>
+                </tr>
+            </thead>
+            <tbody>
+            </tbody>
+            <tr *ngFor="let a of sdat; let num = index">
+                <td scope='row'>{{num+1}}</td>
+                <td>{{ a.fname }}</td>
+                <td>{{ a.fage }}</td>
+                <td>{{ a.fcontact }}</td>
+                <td>{{ a.faddress }}</td>
+                <td>{{ a.femail }}</td>
+                <td>{{ a.fbio }}</td>
+                <td><a href="#">
+                    <span class="glyphicon glyphicon-pencil"></span>
+                  </a><button type="button" id="edit" routerLink="/edit/0" (click)="onEdit(num)">Edit</button></td>
+                <td><button type="button" id="del" (click)="onDel(num)">Delete</button></td>
+            </tr>
+        </table>
+    </div>
+
+
+
+
+    <div class="container ">
+        <div>
+            <button class="btn position-fixed" id="bt1" routerLink="/edit/0" routerLinkActive="active"><strong>Add
+                    Data</strong></button>
+        </div>
+    </div>

@@ -32,48 +32,80 @@ export class AakashComponent implements OnInit {
  
     ngOnInit(): void {}
 
-onClickMe() {
-      console.log(this.message.length);
-      if(this.message.length === 0){
-      const fr = localStorage.getItem("users");
-      const sds = JSON.parse(fr);
-      console.log("sds length " + sds.length)
-      for (var i = 0; i < sds.length; i++) {
-        this.message[i] = sds[i];
-        console.log("sds", sds[i]);
-      }
-    }
-    console.log(this.signupForm.value);
-    this.message.push(this.signupForm.value);
-    console.log(this.message);
-    localStorage.setItem('users', JSON.stringify(this.message));
+// onClickMe() {
+//       console.log(this.message.length);
+//       if(this.message.length === 0){
+//       const fr = localStorage.getItem("userss");
+//       const sds = JSON.parse(fr);
+//       console.log("sds length " + sds.length)
+//       for (var i = 0; i < sds.length; i++) {
+//         this.message[i] = sds[i];
+//         console.log("sds", sds[i]);
+//       }
+  //  }
+  //   console.log(this.signupForm.value);
+  //   this.message.push(this.signupForm.value);
+  //   console.log(this.message);
+  //   localStorage.setItem('userss', JSON.stringify(this.message));
 
-  }
+  // }
 
   ongetEmp() {
-    console.log(localStorage.getItem('users'));
-    const onj = localStorage.getItem('users');
+    console.log(localStorage.getItem('userss'));
+    const onj = localStorage.getItem('userss');
     const d = JSON.parse(onj);
     console.log(d)
     console.log(d[0].fname);
   }
 
   Submit() {
-    this.FullName = this.signupForm.get('fname').value;
-    console.log(this.FullName);
-    console.log(this.signupForm.value);
-    this.message.push(this.signupForm.value);
-    console.log(this.message);
-    localStorage.setItem("userss", JSON.stringify(this.message));
-  }
-  resetForm() {
-    this.signupForm.reset();
+    // this.FullName = this.signupForm.get('fname').value;
+    // console.log(this.FullName);
+    // console.log(this.signupForm.value);
+    // this.message.push(this.signupForm.value);
+    // console.log(this.message);
+    // localStorage.setItem("userss", JSON.stringify(this.message));
+  
+  
+    console.log("message",this.message);
+console.log("locaStorage" ,localStorage.getItem('users'));
+// console.log("obj localstorage",JSON.parse(localStorage.getItem('users')).length);
+if(localStorage.getItem('users')==null){
+console.log("we are in");
+this.message.push(this.signupForm.value);
+localStorage.setItem('users', JSON.stringify(this.message));
+console.log("message",this.message);
+console.log("locaStorage" ,localStorage.getItem('users').length);
+console.log("obj localstorage",JSON.parse(localStorage.getItem('users')).length);
+}else{
+console.log("we are out1");
+const fr = localStorage.getItem("users");
+console.log("fr" + fr);
+const sds = JSON.parse(fr);
+console.log("sds length " + sds.length)
+for(var i=0;i<sds.length;i++){
+this.message[i] = sds[i];
+console.log(this.message);
+}
+
+this.message.push(this.signupForm.value);
+localStorage.setItem('users', JSON.stringify(this.message));
+console.log("message",this.message);
+console.log("locaStorage" ,localStorage.getItem('users').length);
+console.log("obj localstorage",JSON.parse(localStorage.getItem('users')).length);
+
+}
+this.signupForm.reset();
   }
   Details() {
     const obj = localStorage.getItem("userss");
     const detailsObj = JSON.parse(obj);
     console.log("details", detailsObj);
     console.log(detailsObj[0].fname);
+    console.log(detailsObj[1].fage);
+    // console.log(detailsObj[0].fname);
+    // console.log(detailsObj[0].fname);
+    // console.log(detailsObj[0].fname);
   }
 
 }
@@ -110,3 +142,36 @@ onClickMe() {
 
     });
   }*/
+  /*onClickMe() {
+
+console.log("message",this.message);
+console.log("locaStorage" ,localStorage.getItem('users'));
+// console.log("obj localstorage",JSON.parse(localStorage.getItem('users')).length);
+if(localStorage.getItem('users')==null){
+console.log("we are in");
+this.message.push(this.signupForm.value);
+localStorage.setItem('users', JSON.stringify(this.message));
+console.log("message",this.message);
+console.log("locaStorage" ,localStorage.getItem('users').length);
+console.log("obj localstorage",JSON.parse(localStorage.getItem('users')).length);
+}else{
+console.log("we are out1");
+const fr = localStorage.getItem("users");
+console.log("fr" + fr);
+const sds = JSON.parse(fr);
+console.log("sds length " + sds.length)
+for(var i=0;i<sds.length;i++){
+this.message[i] = sds[i];
+console.log(this.message)
+}
+
+this.message.push(this.signupForm.value);
+localStorage.setItem('users', JSON.stringify(this.message));
+console.log("message",this.message);
+console.log("locaStorage" ,localStorage.getItem('users').length);
+console.log("obj localstorage",JSON.parse(localStorage.getItem('users')).length);
+
+}
+
+
+}*/
